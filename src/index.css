@@ -16,17 +16,18 @@ body {
 }
 
 .projectList {
-  margin-left: 10%;
+  margin-left: 15%;
   margin-top: 5rem;
 }
 
 .project {
-  width: 28%;
+  width: 25%;
   max-width: 1170px;
-  float: right;
+  float: left;
   margin-right: 4%;
   margin-top: 65px;
   padding-bottom: 5px;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -76,9 +77,14 @@ body {
   width: 100%;
 }
 
-#link {
+#img {
   text-align: center;
-  padding: 10px;
+}
+
+#link,
+#removeBtn,
+#changerBtn {
+  text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 200px;
@@ -86,7 +92,37 @@ body {
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 8px;
-  text-decoration: none;
+}
+
+#removeBtn {
+  background-color: red;
+  color: lightgray;
+  width: 120px;
+}
+
+#changerBtn {
+  background-color: yellow;
+  color: darkblue;
+  width: 90%;
+  border-color: darkblue;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: -20px;
+}
+
+#removeBtn:hover {
+  background-color: darkred;
+  font-weight: 700;
+  border-width: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#changerBtn:hover {
+  background-color: darkblue;
+  font-weight: 700;
+  color: yellow;
+  border-color: darkblue;
 }
 
 #link:hover {
@@ -133,4 +169,15 @@ footer {
   padding-bottom: 10px;
   font-weight: bold;
   background-color: darkgrey;
+}
+
+.details,
+.descriptions {
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 8%;
+}
+
+.descriptions {
+  margin-bottom: -10px;
 }

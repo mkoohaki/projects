@@ -1,22 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-import './index.css';
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 
-import {projects} from './projectList';
-import ApecificProject from './project';
-
-function Greeting() {
-  return (
-  <section className='projectList'>
-    {
-      projects.map((project, index) => {
-        return <ApecificProject key={index} {...project}></ApecificProject>
-      })
-    }
-  </section>
-  );
-}
-
-ReactDOM.render(<Greeting />, document.getElementById("root"));
-
+  document.getElementById("root")
+);
