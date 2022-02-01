@@ -16,9 +16,7 @@ const UseStateArray = () => {
 
   const pictureChanger = (id) => {
     let allProjects = [...projects];
-    let myProject = { ...allProjects[id - 1] };
-    console.log(myProject);
-    setIndex(index + 1);
+    let myProject = { ...allProjects[id] };
 
     if (index >= myProject.img.length - 1) {
       setIndex(1);
@@ -33,19 +31,20 @@ const UseStateArray = () => {
 
   return (
     <>
-      {projects.map((project) => {
+      {projects.map((project, index) => {
         const { id, img, title, type, language, framework, description, git } =
           project;
+
         return (
           <article key={id} className="project">
             <h1>{title.toUpperCase()}</h1>
-            {img.length != 0 ? (
+            {img.length !== 0 ? (
               <div id="img">
                 <img src={img[0]} alt={title.toUpperCase()} />
                 <button
                   type="button"
                   id="changerBtn"
-                  onClick={() => pictureChanger(id)}
+                  onClick={() => pictureChanger(index)}
                 >
                   Other screens
                 </button>
