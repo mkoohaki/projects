@@ -1,3 +1,7 @@
+<img src="img/React.JPG" width="80%" height="auto"><br>
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
